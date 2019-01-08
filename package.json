@@ -1,0 +1,29 @@
+{
+  "name": "hashcode-2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "node dist/app.js",
+    "watch": "tsc --sourceMap -w",
+    "build": "tsc --sourceMap",
+    "build-prod": "tsc && cp -r node_modules/ dist/node_modules",
+    "package": "tar czvf hashcode-2018.gz dist/",
+    "purge": "rm -rf node_modules/ dist/"
+  },
+  "author": "AlreadyTakenTS",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^10.12.12",
+    "prettier": "^1.15.3",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "engines": {
+    "node": ">=10.14.1"
+  }
+}
