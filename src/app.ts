@@ -14,3 +14,32 @@
  * 🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕🍺🍕
  * 👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅
  */
+
+import fs from 'fs';
+
+const filenames = ['a_example.in'];
+
+filenames.forEach(f => {
+  const lines = fs.readFileSync('in/' + f, 'utf-8').split('\n');
+  console.log(lines);
+  lines.forEach(l => console.log(l.split(' ')));
+
+  fs.writeFile(
+    'out/' + f + '.out',
+    lines
+      .map(l =>
+        l
+          .split(' ')
+          .map(e => e * 3)
+          .join(' ')
+      )
+      .join('\n'),
+    function(err) {
+      if (err) {
+        return console.log(err);
+      }
+
+      console.log('The file was saved!');
+    }
+  );
+});

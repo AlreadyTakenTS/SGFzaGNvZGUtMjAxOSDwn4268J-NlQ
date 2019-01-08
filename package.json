@@ -14,14 +14,10 @@
   "author": "AlreadyTakenTS",
   "license": "MIT",
   "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/node": "^10.12.12",
+    "@types/node": "^10.12.18",
     "prettier": "^1.15.3",
     "tslint": "^5.11.0",
     "typescript": "^3.2.1"
-  },
-  "dependencies": {
-    "axios": "^0.18.0"
   },
   "engines": {
     "node": ">=10.14.1"
