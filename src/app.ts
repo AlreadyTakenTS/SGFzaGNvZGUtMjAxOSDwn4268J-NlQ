@@ -34,7 +34,7 @@ filenames.forEach(f => {
           .join(' ')
       )
       .join('\n'),
-    function(err) {
+    err => {
       if (err) {
         return console.log(err);
       }
