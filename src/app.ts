@@ -39,7 +39,8 @@ filenames.forEach(f => {
         return console.log(err);
       }
 
-      console.log('The file was saved!');
+      console.log('The file was saved! 🕶️');
+      console.log('You can eat 🍕 and drink 🍺');
     }
   );
 });
