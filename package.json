@@ -1,5 +1,5 @@
 {
-  "name": "hashcode-2018",
+  "name": "hashcode-2019",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.ts",
@@ -8,10 +8,10 @@
     "watch": "tsc --sourceMap -w",
     "build": "tsc --sourceMap",
     "build-prod": "tsc && cp -r node_modules/ dist/node_modules",
-    "package": "tar czvf hashcode-2018.gz dist/",
+    "package": "tar czvf hashcode-2019.gz dist/",
     "purge": "rm -rf node_modules/ dist/"
   },
-  "author": "AlreadyTakenTS",
+  "author": "Les mésanges",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^10.12.18",
