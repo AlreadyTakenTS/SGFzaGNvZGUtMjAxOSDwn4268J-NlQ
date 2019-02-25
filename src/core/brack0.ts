@@ -1,3 +1,5 @@
-const externalFn = (lines: string[]) => {};
+const brack0Fn = (lines: string[]) => {
+  console.log('Done !');
+};
 
-export default externalFn;
+export default brack0Fn;

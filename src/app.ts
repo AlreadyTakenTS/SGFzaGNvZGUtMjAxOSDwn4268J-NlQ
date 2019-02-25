@@ -16,10 +16,10 @@
  */
 
 import fs from 'fs';
-import externalFn from './core/necraidan';
-// import { promisify } from 'util';
+import brack0Fn from './core/brack0';
+import necraidanFn from './core/necraidan';
 
-// const fsWriteFile = promisify(fs.writeFile);
+const isNec = !!process.argv[2];
 
 const filenames = ['a_example.in'];
 
@@ -28,7 +28,7 @@ filenames.forEach(f => {
   console.log(lines);
   lines.forEach(l => console.log(l.split(' ')));
 
-  fs.writeFile('out/' + f + '.out', externalFn(lines), err => {
+  fs.writeFile('out/' + f + '.out', isNec ? necraidanFn(lines) : brack0Fn(lines), err => {
     if (err) {
       return console.log(err);
     }

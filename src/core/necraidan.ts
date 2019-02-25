@@ -1,4 +1,4 @@
-const externalFn = (lines: string[]) => {
+const necraidanFn = (lines: string[]) => {
   return lines
     .map(l =>
       l
@@ -9,4 +9,4 @@ const externalFn = (lines: string[]) => {
     .join('\n');
 };
 
-export default externalFn;
+export default necraidanFn;
