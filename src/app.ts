@@ -21,12 +21,12 @@ import necraidanFn from './core/necraidan';
 
 const isNec = !!process.argv[2];
 
-const filenames = ['a_example.in'];
+const filenames = ['a_example.txt', 'b_lovely_landscapes.txt', 'c_memorable_moments.txt', 'd_pet_pictures.txt', 'e_shiny_selfies.txt'];
+// const filenames = ['a_example.txt'];
+//const filenames = ['c_memorable_moments.txt'];
 
 filenames.forEach(f => {
   const lines = fs.readFileSync('in/' + f, 'utf-8').split('\n');
-  console.log(lines);
-  lines.forEach(l => console.log(l.split(' ')));
 
   fs.writeFile('out/' + f + '.out', isNec ? necraidanFn(lines) : brack0Fn(lines), err => {
     if (err) {
