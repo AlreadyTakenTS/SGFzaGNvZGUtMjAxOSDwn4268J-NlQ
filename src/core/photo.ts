@@ -1,5 +1,5 @@
 export interface Photo {
-  number: number;
+  number: string;
   direction: PhotoDirection;
   tags: string[];
 }

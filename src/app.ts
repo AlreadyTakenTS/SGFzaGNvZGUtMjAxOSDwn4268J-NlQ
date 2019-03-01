@@ -19,13 +19,15 @@ import fs from 'fs';
 import brack0Fn from './core/brack0';
 import necraidanFn from './core/necraidan';
 
-const isNec = !!process.argv[2];
+//const isNec = !!process.argv[2];
 
-const filenames = ['a_example.txt', 'b_lovely_landscapes.txt', 'c_memorable_moments.txt', 'd_pet_pictures.txt', 'e_shiny_selfies.txt'];
-// const filenames = ['a_example.txt'];
-//const filenames = ['c_memorable_moments.txt'];
+const isNec = true;
 
-filenames.forEach(f => {
+const filenames = ['a_example.txt', /*'b_lovely_landscapes.txt',*/ 'c_memorable_moments.txt', 'd_pet_pictures.txt', 'e_shiny_selfies.txt'];
+// const filenames = ['b_lovely_landscapes.txt'];
+
+filenames.forEach((f: any, index: number) => {
+  console.log('Start file ' + (index + 1));
   const lines = fs.readFileSync('in/' + f, 'utf-8').split('\n');
 
   fs.writeFile('out/' + f + '.out', isNec ? necraidanFn(lines) : brack0Fn(lines), err => {
